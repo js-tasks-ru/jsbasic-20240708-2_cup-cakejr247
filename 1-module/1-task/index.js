@@ -9,8 +9,6 @@ function factorial(n) {
 }
 
 
-
-
 // Рекурсия
 
 // function factorial(n) {
