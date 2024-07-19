@@ -11,13 +11,13 @@ function sumSalary(salaries) {
 
   let sum = 0;
   
-  for (value of Object.values(salaries)) {
+  for (key in salaries) {
     
-    if (isNaN(value) || !isFinite(value)) {
+    if (isNaN(salaries[key]) || !isFinite(salaries[key])) {
       continue;
     }
-    if (typeof value === 'number') {
-      sum = sum + value;
+    if (typeof salaries[key] === 'number') {
+      sum = sum + salaries[key];
     }
   }
 
