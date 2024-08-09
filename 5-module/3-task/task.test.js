@@ -26,7 +26,7 @@ describe('5-module-3-task', () => {
                       <span class="carousel__price">€16.00</span>
                       <div class="carousel__title">Penang shrimp</div>
                       <button type="button" class="carousel__button">
-                          <img src="/assets/images/icons/plus-icon.svg" alt="icon">
+                          <img src="assets/images/icons/plus-icon.svg" alt="icon">
                       </button>
                   </div>
               </div>
