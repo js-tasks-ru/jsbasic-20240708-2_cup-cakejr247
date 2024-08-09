@@ -1,15 +1,26 @@
 function initCarousel() {
-  const carouselInner = document.querySelector('.carousel__inner');
-  const carouselRight = document.querySelector('.carousel__arrow_right');
-  const carouselLeft = document.querySelector('.carousel__arrow_left');
+  const carousel = document.querySelector('.carousel');
   
+  if (!carousel) {
+    console.error('Элемент с классом .carousel не найден');
+    return;
+  }
+
+  const carouselInner = carousel.querySelector('.carousel__inner');
+  const carouselRight = carousel.querySelector('.carousel__arrow_right');
+  const carouselLeft = carousel.querySelector('.carousel__arrow_left');
   const slides = carouselInner.children;
   const slidesCount = slides.length;
-  const slideWidth = slides[0].offsetWidth;
   
+  if (slidesCount === 0) {
+    console.error('В карусели нет слайдов');
+    return;
+  }
+
+  const slideWidth = slides[0].offsetWidth;
   let currentSlide = 0;
 
-  carouselLeft.style.display = 'none';
+  carouselLeft.style.display = 'none'; // Изначально скрываем кнопку "назад"
 
   carouselRight.addEventListener('click', () => {
     if (currentSlide < slidesCount - 1) {
@@ -35,3 +46,4 @@ function initCarousel() {
 }
 
 initCarousel();
+
