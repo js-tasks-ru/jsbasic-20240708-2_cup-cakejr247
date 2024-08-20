@@ -20,7 +20,7 @@ function initCarousel() {
   const slideWidth = slides[0].offsetWidth;
   let currentSlide = 0;
 
-  carouselLeft.style.display = 'none'; // Изначально скрываем кнопку "назад"
+  carouselLeft.style.display = 'none'; 
 
   carouselRight.addEventListener('click', () => {
     if (currentSlide < slidesCount - 1) {
